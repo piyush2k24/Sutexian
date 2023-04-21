@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "114119613297",
+    "project_id": "piyush2k24-ebfa8",
+    "storage_bucket": "piyush2k24-ebfa8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114119613297:android:7a5fd53320318246bdf4d0",
+        "android_client_info": {
+          "package_name": "com.piyush2k24.sutexian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114119613297-l7961ujk0di1jdtl3p3jmoeib3ntcgaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABIcZeC0v7a2Z2WViSGnoNSNwBFoPjkxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114119613297-l7961ujk0di1jdtl3p3jmoeib3ntcgaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
