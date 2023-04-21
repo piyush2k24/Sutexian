@@ -6,13 +6,13 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="192.168.0.102:5655" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\piyush2k24\.android\avd\..\avd\Android14.avd" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-04-20T14:34:54.781559400Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-04-21T02:42:06.677062400Z" />
     <multipleDevicesSelectedInDropDown value="true" />
     <runningDeviceTargetsSelectedWithDialog>
       <Target>
@@ -20,7 +20,7 @@
         <deviceKey>
           <Key>
             <type value="SERIAL_NUMBER" />
-            <value value="192.168.0.102:5655" />
+            <value value="adb-7HWGFY8XLR85TGR8-pyuLDD._adb-tls-connect._tcp" />
           </Key>
         </deviceKey>
       </Target>

@@ -92,12 +92,51 @@
             android:layout_marginStart="2dp"/>
     </LinearLayout>
 
+    <RadioGroup
+        android:id="@+id/Rdg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/Llc2"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            app:buttonTint="@color/md_theme_light_primary"
+            android:layout_marginEnd="5dp" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            app:buttonTint="@color/md_theme_light_primary"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/Other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other"
+            app:buttonTint="@color/md_theme_light_primary"
+            android:layout_marginStart="5dp"/>
+
+    </RadioGroup>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
-        android:layout_below="@id/Llc2"
+        android:layout_below="@id/Rdg"
         android:layout_marginTop="5dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
