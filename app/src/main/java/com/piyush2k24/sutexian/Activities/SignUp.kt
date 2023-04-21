@@ -6,9 +6,10 @@ import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
-import com.piyush2k24.sutexian.MainActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.piyush2k24.sutexian.R
 import com.piyush2k24.sutexian.databinding.SignUpBinding
 
@@ -16,6 +17,8 @@ class SignUp : AppCompatActivity() {
     private lateinit var binding: SignUpBinding
     private lateinit var materialDatePicker: MaterialDatePicker<Long>
     private lateinit var arrayAdapter:ArrayAdapter<String>
+    private lateinit var firebaseAuth: FirebaseAuth
+
     var CountryNo= arrayOf(
         "+91","+01","+41","+49","+45","+46","+47","+55",
         "+81","+92","+93","+94"
@@ -28,13 +31,21 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= SignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth=FirebaseAuth.getInstance()
         caller();
     }
     private fun caller(){
         binding.SignUp.setOnClickListener{
             if(isValidate()){
-                startActivity(Intent(this@SignUp,MainActivity::class.java))
-                showToast("Successfully SignUp")
+                firebaseAuth.createUserWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
+                    .addOnCompleteListener(OnCompleteListener {
+                        if (it.isComplete){
+                            showToast("Successfully SignUp")
+                            startActivity(Intent(this@SignUp,SignIn::class.java))
+                        }else{
+                            showToast("Error")
+                        }
+                    })
             }
         }
         binding.AlreadyHaveAnAccount.setOnClickListener{
@@ -75,6 +86,12 @@ class SignUp : AppCompatActivity() {
         }else if (binding.AmroliColleges.text.toString().isEmpty()){
             showToast("Please Choose The college")
             return false
+        }else if(binding.Password.text.toString().isEmpty()){
+            showToast("Set Your Password")
+            return false
+        }else if(binding.Password.text.toString().length<6){
+            showToast("Password Length Must be 6 char")
+            return false
         }
         return true
     }
@@ -100,7 +117,6 @@ class SignUp : AppCompatActivity() {
         arrayAdapter= ArrayAdapter<String>(this@SignUp,R.layout.cust_spinner,Colleges)
         binding.AmroliColleges.setAdapter(arrayAdapter)
     }
-
     private fun showToast(str : String){
         Toast.makeText(this@SignUp,str,Toast.LENGTH_SHORT).show()
     }

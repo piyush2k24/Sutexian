@@ -6,6 +6,6 @@
     android:textSize="19sp"
     android:textStyle="normal"
     android:fontFamily="@font/b612"
-    android:textColor="@color/md_theme_light_primary"
+    android:textColor="@color/md_theme_dark_tertiaryContainer"
     android:padding="8dp">
 </TextView>

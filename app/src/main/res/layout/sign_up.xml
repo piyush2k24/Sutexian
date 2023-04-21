@@ -12,11 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:fontFamily="@font/b612"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="12dp"
         android:layout_centerHorizontal="true"
         android:textColor="@color/md_theme_light_primary"/>
 
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/first_name"
         android:layout_below="@id/text_header"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:layout_centerHorizontal="true">
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:layout_below="@id/Llc2"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:layout_below="@id/Rdg"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:layout_centerHorizontal="true">
@@ -205,6 +205,24 @@
             android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_below="@id/College"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/SignUp"
         android:layout_width="match_parent"
@@ -220,8 +238,8 @@
         app:cornerRadius="19dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/College"
-        android:layout_marginTop="22dp"
+        android:layout_below="@id/password_toggle"
+        android:layout_marginTop="12dp"
         app:rippleColor="@color/ic_launcher_background"/>
 
     <com.google.android.material.textview.MaterialTextView
@@ -232,8 +250,8 @@
         android:layout_below="@id/SignUp"
         android:layout_centerHorizontal="true"
         android:textStyle="normal"
-        android:textSize="17sp"
-        android:layout_marginTop="12dp"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/md_theme_dark_inverseOnSurface"/>
 
 </RelativeLayout>

@@ -5,23 +5,33 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.firebase.auth.FirebaseAuth
 import com.piyush2k24.sutexian.MainActivity
 import com.piyush2k24.sutexian.databinding.SignInBinding
 
 class SignIn : AppCompatActivity() {
     private lateinit var binding: SignInBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=SignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth=FirebaseAuth.getInstance()
         caller();
     }
 
     private fun caller(){
         binding.SignIn.setOnClickListener{
             if(isValidate()){
-                startActivity(Intent(this@SignIn,MainActivity::class.java))
-                showToast("Successfully SignIn !")
+                firebaseAuth.signInWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
+                    .addOnSuccessListener {
+                        showToast("Successfully SignIn")
+                        startActivity(Intent(this@SignIn, MainActivity::class.java))
+                    }
+                    .addOnFailureListener(OnFailureListener {
+                        showToast("Password Not Match 🤨")
+                    })
             }
         }
         binding.CreateAnNewAccount.setOnClickListener{
@@ -38,9 +48,6 @@ class SignIn : AppCompatActivity() {
             return false
         }else if (binding.Password.text.toString().isEmpty()){
             showToast("Password Can't be Empty")
-            return false
-        }else if (binding.Password.text.toString().length<6){
-            showToast("Password length must be 6 char")
             return false
         }
         return true
