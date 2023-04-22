@@ -17,4 +17,8 @@
     <string name="male">Male</string>
     <string name="other">Other</string>
     <string name="female">Female</string>
+    <string name="user_name">User Name</string>
+    <string name="user_designation">User Designation</string>
+    <string name="user_phone">User Phone</string>
+    <string name="user_email">User Email</string>
 </resources>

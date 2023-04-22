@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FirebaseAuth
-import com.piyush2k24.sutexian.MainActivity
+import com.piyush2k24.sutexian.View.DemoUsersList
 import com.piyush2k24.sutexian.databinding.SignInBinding
 
 class SignIn : AppCompatActivity() {
@@ -27,7 +27,7 @@ class SignIn : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
                     .addOnSuccessListener {
                         showToast("Successfully SignIn")
-                        startActivity(Intent(this@SignIn, MainActivity::class.java))
+                        startActivity(Intent(this@SignIn, DemoUsersList::class.java))
                     }
                     .addOnFailureListener(OnFailureListener {
                         showToast("Password Not Match 🤨")

@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth.ktx)
+    implementation (libs.circleimageview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:padding="12dp"
+    android:background="@drawable/bg_user"
+    android:backgroundTint="@color/md_theme_light_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/bg_user"
+        android:layout_gravity="center"
+        android:padding="12dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/UserImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/piyush_frag"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="0dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/md_theme_light_primary"
+            android:hint="@string/user_name"
+            android:textStyle="bold"
+            android:fontFamily="@font/b612"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/md_theme_light_primary"
+            android:hint="@string/user_email"
+            android:textStyle="normal"
+            android:fontFamily="@font/b612"
+            android:layout_marginTop="3dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/md_theme_light_primary"
+            android:hint="@string/user_phone"
+            android:textStyle="normal"
+            android:fontFamily="@font/b612"
+            android:layout_marginTop="3dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/UserDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/md_theme_light_primary"
+            android:hint="@string/user_designation"
+            android:textStyle="normal"
+            android:fontFamily="@font/b612"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</LinearLayout>
