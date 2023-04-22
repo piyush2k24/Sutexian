@@ -21,4 +21,6 @@
     <string name="user_designation">User Designation</string>
     <string name="user_phone">User Phone</string>
     <string name="user_email">User Email</string>
+    <string name="user_information">User Information</string>
+    <string name="back">Back</string>
 </resources>

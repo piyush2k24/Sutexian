@@ -1,6 +1,8 @@
 package com.piyush2k24.sutexian.View
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
 import com.piyush2k24.sutexian.Adapter.UserAdapter
 import com.piyush2k24.sutexian.Model.User
@@ -177,5 +179,15 @@ class DemoUsersList : AppCompatActivity() {
             )
         )
         binding.lstView.adapter=UserAdapter(this,R.layout.list_item,list)
+
+        binding.lstView.setOnItemClickListener(AdapterView.OnItemClickListener { parent, view, position, id ->
+            val intent:Intent=Intent(this,ShowFullViewUserProfile::class.java)
+            intent.putExtra("UserPhoto",list[position].UserPhoto)
+            intent.putExtra("UserName",list[position].UserName)
+            intent.putExtra("UserEmail",list[position].UserEmail)
+            intent.putExtra("UserPhone",list[position].UserPhone)
+            intent.putExtra("UserDesignation",list[position].UserDesignation)
+            startActivity(intent)
+        })
     }
 }
