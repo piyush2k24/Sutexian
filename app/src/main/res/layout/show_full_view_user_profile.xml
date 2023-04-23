@@ -30,15 +30,97 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/Llc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_res"
+                android:backgroundTint="@color/Transparent"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginEnd="0dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/BackForward"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_user"
+                    android:backgroundTint="@color/md_theme_dark_inverseSurface"
+                    android:src="@drawable/ic_back_forward"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Llc2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/UserDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:hint="@string/user_designation"
+                    android:textColorHint="@color/md_theme_light_background"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/b612"
+                    android:textColor="@color/md_theme_light_background"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Llc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_res"
+                android:backgroundTint="@color/Transparent"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginEnd="12dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/LogOut"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_user"
+                    android:backgroundTint="@color/md_theme_dark_inverseSurface"
+                    android:src="@drawable/ic_log_out"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/UserPhoto"
             android:layout_width="256dp"
             android:layout_height="256dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="12dp"
             android:src="@drawable/piyush_frag"
             app:civ_border_color="@color/md_theme_light_surface"
-            app:civ_border_width="12dp"
-            app:civ_border_overlay="false"/>
+            app:civ_border_overlay="false"
+            app:civ_border_width="12dp" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/UserName"
             android:layout_width="match_parent"
@@ -52,6 +134,7 @@
             android:textSize="32sp"
             android:gravity="center"
             android:layout_margin="12dp" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/UserEmail"
             android:layout_width="match_parent"
@@ -65,6 +148,7 @@
             android:textSize="22sp"
             android:gravity="center"
             android:layout_margin="5dp"/>
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/UserPhone"
             android:layout_width="match_parent"
@@ -78,33 +162,6 @@
             android:textSize="22sp"
             android:gravity="center"
             android:layout_margin="5dp"/>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/UserDesignation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:hint="@string/user_designation"
-            android:textColorHint="@color/md_theme_light_background"
-            android:textStyle="normal"
-            android:fontFamily="@font/b612"
-            android:textColor="@color/md_theme_light_background"
-            android:textSize="22sp"
-            android:gravity="center"
-            android:layout_margin="5dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/Back"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            app:backgroundTint="@color/md_theme_light_background"
-            app:cornerRadius="12dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/back"
-            android:textColor="@color/md_theme_light_primary"
-            android:textSize="22sp"
-            android:fontFamily="@font/b612"
-            android:textStyle="bold"/>
     </LinearLayout>
 </LinearLayout>
