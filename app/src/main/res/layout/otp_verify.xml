@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.OtpVerify"
+    android:background="@color/md_theme_light_primary">
+
+    <LinearLayout
+        android:id="@+id/Llc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_llc"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="42dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_phone"
+            android:textSize="32sp"
+            android:fontFamily="@font/b612"
+            android:textColor="@color/md_theme_light_primary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="32dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/otp"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/FillOtp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ResendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_otp"
+            android:textStyle="bold"
+            android:fontFamily="@font/b612"
+            android:textColor="@color/md_theme_light_primary"
+            android:textSize="17sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="17dp"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"/>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Verify"
+        android:layout_below="@+id/Llc1"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:text="@string/verify"
+        android:textSize="22sp"
+        android:fontFamily="@font/b612"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/md_theme_light_primary"
+        android:backgroundTint="@color/cardview_light_background"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        app:cornerRadius="19dp"
+        app:rippleColor="@color/ic_launcher_background"/>
+</RelativeLayout>

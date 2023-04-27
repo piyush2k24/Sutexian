@@ -54,7 +54,7 @@
             android:layout_marginStart="22dp"
             android:layout_marginEnd="22dp"
             android:layout_marginTop="72dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="17dp"
             android:gravity="center">
 
             <com.google.android.material.textview.MaterialTextView
@@ -100,6 +100,21 @@
                     android:layout_height="match_parent"
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/SignInWithPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_with_phone"
+            android:textStyle="bold"
+            android:fontFamily="@font/b612"
+            android:textColor="@color/md_theme_light_background"
+            android:textSize="17sp"
+            android:layout_marginBottom="17dp"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"/>
     </LinearLayout>
 </RelativeLayout>

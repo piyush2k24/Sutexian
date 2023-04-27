@@ -38,6 +38,10 @@ class SignIn : AppCompatActivity() {
             startActivity(Intent(applicationContext,SignUp::class.java))
         }
 
+        binding.SignInWithPhone.setOnClickListener{
+            startActivity(Intent(this@SignIn,OtpLogin::class.java))
+        }
+
     }
     private fun isValidate(): Boolean {
         if(binding.EmailId.text.toString().isEmpty()){

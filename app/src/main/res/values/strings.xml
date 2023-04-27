@@ -23,4 +23,11 @@
     <string name="user_email">User Email</string>
     <string name="user_information">User Information</string>
     <string name="back">Back</string>
+    <string name="signin_with_phone">SignIn With Phone</string>
+    <string name="sign_in_with_email">Sign In with Email</string>
+    <string name="verify_phone">Verify Phone</string>
+    <string name="otp">123456</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend Otp</string>
+    <string name="userphone">UserPhone</string>
 </resources>
