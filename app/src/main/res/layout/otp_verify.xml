@@ -29,14 +29,11 @@
             android:gravity="center"
             android:layout_margin="32dp"/>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/otp"
-            android:layout_marginStart="72dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginTop="12dp">
+            android:layout_margin="52dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/FillOtp"
@@ -45,20 +42,6 @@
                 android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/ResendOtp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/resend_otp"
-            android:textStyle="bold"
-            android:fontFamily="@font/b612"
-            android:textColor="@color/md_theme_light_primary"
-            android:textSize="17sp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="17dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"/>
     </LinearLayout>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/Verify"

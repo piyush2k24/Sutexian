@@ -17,6 +17,7 @@ class OtpLogin : AppCompatActivity() {
     private lateinit var binding:OtpLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
+    private lateinit var resendToken:PhoneAuthProvider.ForceResendingToken
     lateinit var verificationId:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,6 @@ class OtpLogin : AppCompatActivity() {
         Caller()
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
-                TODO("Not yet implemented")
             }
 
             override fun onVerificationFailed(ec: FirebaseException) {
@@ -36,6 +36,7 @@ class OtpLogin : AppCompatActivity() {
             override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
                 super.onCodeSent(p0, p1)
                 verificationId=p0
+                resendToken=p1
                 val intent=Intent(applicationContext,OtpVerify::class.java)
                 intent.putExtra("verifyId",verificationId)
                 Log.d("verifyId",verificationId)
@@ -60,7 +61,7 @@ class OtpLogin : AppCompatActivity() {
                 PhoneAuthProvider.verifyPhoneNumber(option)
                 showToast("Please Verify Number")
                 val intent:Intent=Intent(this,OtpVerify::class.java)
-                intent.putExtra("number","+91${binding.PhoneNo.text.toString()}")
+                intent.putExtra("UserPhone","+91${binding.PhoneNo.text.toString()}")
                 startActivity(intent)
             }
         }

@@ -11,14 +11,14 @@ import com.piyush2k24.sutexian.View.DemoUsersList
 import com.piyush2k24.sutexian.databinding.OtpVerifyBinding
 
 class OtpVerify : AppCompatActivity() {
-    private lateinit var  binding: OtpVerifyBinding
+    private lateinit var binding: OtpVerifyBinding
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=OtpVerifyBinding.inflate(layoutInflater)
         setContentView(binding.root)
         firebaseAuth=FirebaseAuth.getInstance()
-        val verificationId=  intent.getStringExtra("verifyId")
+        val verificationId =  intent.getStringExtra("verifyId")
 
         binding.Verify.setOnClickListener {
             val otp = binding.FillOtp.text.toString()
@@ -32,14 +32,14 @@ class OtpVerify : AppCompatActivity() {
         }
     }
 
-    private fun signInWithPhoneAuthCredentialDemo(credential: PhoneAuthCredential){
+    private fun signInWithPhoneAuthCredentialDemo(credential: PhoneAuthCredential) {
         firebaseAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this){
-                if(it.isSuccessful){
-                    showToast("Welcome")
-                    startActivity(Intent(this,DemoUsersList::class.java))
+            .addOnCompleteListener(this) {
+                if (it.isSuccessful) {
+                    showToast("Welcome !")
+                    startActivity(Intent(this, DemoUsersList::class.java))
                     finish()
-                }else{
+                } else {
                     showToast(it.exception.toString())
                 }
             }
