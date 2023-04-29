@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth.ktx)
+    implementation (libs.play.services.auth)
     implementation (libs.integrity)
     implementation (libs.circleimageview)
     implementation (libs.pinview)

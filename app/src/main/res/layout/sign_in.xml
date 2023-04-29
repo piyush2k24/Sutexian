@@ -103,18 +103,33 @@
 
         </LinearLayout>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/SignInWithPhone"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/signin_with_phone"
-            android:textStyle="bold"
-            android:fontFamily="@font/b612"
-            android:textColor="@color/md_theme_light_background"
-            android:textSize="17sp"
-            android:layout_marginBottom="17dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="7dp"
+            android:layout_margin="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/SignInWithGoogle"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/google_64px"
+                android:background="@drawable/bg_llc"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:padding="7dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/SignInWithPhone"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/sms_64px"
+                android:background="@drawable/bg_llc"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:padding="7dp"/>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

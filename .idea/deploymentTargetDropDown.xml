@@ -12,33 +12,15 @@
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-04-27T09:18:39.003732Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-04-29T02:26:39.170403200Z" />
     <multipleDevicesSelectedInDropDown value="true" />
     <runningDeviceTargetsSelectedWithDialog>
       <Target>
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="127.0.0.1:58526" />
-          </Key>
-        </deviceKey>
-      </Target>
-      <Target>
-        <type value="RUNNING_DEVICE_TARGET" />
-        <deviceKey>
-          <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="7HWGFY8XLR85TGR8" />
-          </Key>
-        </deviceKey>
-      </Target>
-      <Target>
-        <type value="RUNNING_DEVICE_TARGET" />
-        <deviceKey>
-          <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="'C:\Users\piyush2k24\.android\avd\Android14.avd'" />
+            <value value="C:\Users\piyush2k24\.android\avd\Android14.avd" />
           </Key>
         </deviceKey>
       </Target>
