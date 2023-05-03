@@ -10,6 +10,9 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.piyush2k24.sutexian.Model.Students
 import com.piyush2k24.sutexian.R
 import com.piyush2k24.sutexian.databinding.SignUpBinding
 
@@ -18,6 +21,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var materialDatePicker: MaterialDatePicker<Long>
     private lateinit var arrayAdapter:ArrayAdapter<String>
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     var CountryNo= arrayOf(
         "+91","+01","+41","+49","+45","+46","+47","+55",
@@ -32,6 +36,7 @@ class SignUp : AppCompatActivity() {
         binding= SignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         firebaseAuth=FirebaseAuth.getInstance()
+        databaseReference=FirebaseDatabase.getInstance().getReference("Students")
         caller();
     }
     private fun caller(){
@@ -40,12 +45,39 @@ class SignUp : AppCompatActivity() {
                 firebaseAuth.createUserWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
                     .addOnCompleteListener(OnCompleteListener {
                         if (it.isComplete){
-                            showToast("Successfully SignUp")
                             startActivity(Intent(this@SignUp,SignIn::class.java))
                         }else{
                             showToast("Error")
                         }
                     })
+
+                val Sid=databaseReference.push().key!!
+
+                val Students= Students(
+                    binding.Fname.text.toString(),
+                    binding.Lname.text.toString(),
+                    binding.Birthdate.text.toString(),
+                    binding.EmailId.text.toString(),
+                    binding.PhoneNo.text.toString(),
+                    binding.AmroliColleges.text.toString()
+                )
+
+                databaseReference.child(Sid).setValue(Students)
+                    .addOnCompleteListener{
+
+                        showToast("Successfully SignUp")
+
+                        binding.Fname.text?.clear()
+                        binding.Lname.text?.clear()
+                        binding.Birthdate.text?.clear()
+                        binding.EmailId.text?.clear()
+                        binding.PhoneNo.text?.clear()
+                        binding.AmroliColleges.text?.clear()
+                        binding.Password.text?.clear()
+                    }
+                    .addOnFailureListener{
+                        showToast(it.toString())
+                    }
             }
         }
         binding.AlreadyHaveAnAccount.setOnClickListener{

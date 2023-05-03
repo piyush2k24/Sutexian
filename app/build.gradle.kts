@@ -50,6 +50,7 @@ dependencies {
     implementation (libs.integrity)
     implementation (libs.circleimageview)
     implementation (libs.pinview)
+    implementation("com.google.firebase:firebase-database-ktx:20.2.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
