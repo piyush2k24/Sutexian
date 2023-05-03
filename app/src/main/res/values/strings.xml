@@ -37,4 +37,17 @@
     <string name="student_bdate">Bdate :</string>
     <string name="student_clg">Clg :</string>
     <string name="student_surname">SName :</string>
+    <string name="student_information">Student Information</string>
+    <string name="stud_name">Stud Name :</string>
+    <string name="std_name">Student Name</string>
+    <string name="std_phone">Student Phone</string>
+    <string name="stud_phone">Stud Phone :</string>
+    <string name="stud_email">Stud Email :</string>
+    <string name="std_email">Student Email</string>
+    <string name="std_bdate">Student Bdate</string>
+    <string name="stud_bdate">Stud Bdate :</string>
+    <string name="stud_college">Stud College :</string>
+    <string name="std_college">Student College</string>
+    <string name="update_data">Update Data</string>
+    <string name="delete_data">Delete Data</string>
 </resources>
