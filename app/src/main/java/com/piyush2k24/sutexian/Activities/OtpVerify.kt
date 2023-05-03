@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import com.piyush2k24.sutexian.View.DemoUsersList
+import com.piyush2k24.sutexian.View.GetDataFromRealtimeFirebase
 import com.piyush2k24.sutexian.databinding.OtpVerifyBinding
 
 class OtpVerify : AppCompatActivity() {
@@ -37,7 +38,7 @@ class OtpVerify : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     showToast("Welcome !")
-                    startActivity(Intent(this, DemoUsersList::class.java))
+                    startActivity(Intent(this, GetDataFromRealtimeFirebase::class.java))
                     finish()
                 } else {
                     showToast(it.exception.toString())

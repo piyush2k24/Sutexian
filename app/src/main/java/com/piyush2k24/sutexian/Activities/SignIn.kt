@@ -87,7 +87,7 @@ class SignIn : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
                     .addOnSuccessListener {
                         showToast("Successfully SignIn")
-                        startActivity(Intent(this@SignIn, DemoUsersList::class.java))
+                        startActivity(Intent(this@SignIn, GetDataFromRealtimeFirebase::class.java))
                     }
                     .addOnFailureListener(OnFailureListener {
                         showToast("Password Not Match 🤨")
