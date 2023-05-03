@@ -31,4 +31,10 @@
     <string name="resend_otp">Resend Otp</string>
     <string name="userphone">UserPhone</string>
     <string name="num_format">+91 1234567890</string>
+    <string name="student_name">FName :</string>
+    <string name="student_email">Email :</string>
+    <string name="student_phone">Phone :</string>
+    <string name="student_bdate">Bdate :</string>
+    <string name="student_clg">Clg :</string>
+    <string name="student_surname">SName :</string>
 </resources>

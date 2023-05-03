@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.piyush2k24.sutexian.R
 import com.piyush2k24.sutexian.View.DemoUsersList
+import com.piyush2k24.sutexian.View.GetDataFromRealtimeFirebase
 import com.piyush2k24.sutexian.databinding.SignInBinding
 
 class SignIn : AppCompatActivity() {
@@ -73,7 +74,7 @@ class SignIn : AppCompatActivity() {
             .addOnCompleteListener{
                 if(it.isSuccessful){
                     showToast("Welcome")
-                    startActivity(Intent(this,DemoUsersList::class.java))
+                    startActivity(Intent(this,GetDataFromRealtimeFirebase::class.java))
                 }else{
                     showToast(it.toString())
                 }
