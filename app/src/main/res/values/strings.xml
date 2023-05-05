@@ -50,4 +50,5 @@
     <string name="std_college">Student College</string>
     <string name="update_data">Update Data</string>
     <string name="delete_data">Delete Data</string>
+    <string name="crash_button">Crash Button</string>
 </resources>

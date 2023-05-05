@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -46,11 +47,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth.ktx)
+    implementation (libs.firebase.crashlytics.ktx)
+    implementation (libs.firebase.analytics.ktx)
+    implementation(libs.firebase.database.ktx)
     implementation (libs.play.services.auth)
     implementation (libs.integrity)
     implementation (libs.circleimageview)
     implementation (libs.pinview)
-    implementation("com.google.firebase:firebase-database-ktx:20.2.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

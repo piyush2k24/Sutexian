@@ -1,7 +1,13 @@
 [versions]
 circleimageview = "3.1.0"
 com-android-application = "8.1.0-beta01"
+firebase-analytics = "21.2.2"
 firebase-bom = "31.5.0"
+firebase-crashlytics-gradle = "2.9.5"
+firebase-crashlytics-ktx = "18.3.7"
+firebase-database-ktx = "20.2.1"
+google-services = "4.3.15"
+gradle = "3.4.0"
 integrity = "1.1.0"
 org-jetbrains-kotlin-android = "1.8.0"
 core-ktx = "1.10.0"
@@ -18,7 +24,14 @@ play-services-auth = "20.5.0"
 [libraries]
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebase-analytics" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebase-crashlytics-gradle" }
+firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx", version.ref = "firebase-crashlytics-ktx" }
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebase-database-ktx" }
+google-services = { module = "com.google.gms:google-services", version.ref = "google-services" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 integrity = { module = "com.google.android.play:integrity", version.ref = "integrity" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
