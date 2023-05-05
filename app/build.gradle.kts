@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("com.google.firebase.firebase-perf")
 }
 
 android {
@@ -14,7 +15,7 @@ android {
         minSdk = 24
         targetSdk = 33
         versionCode = 1
-        versionName = "1.0"
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,6 +51,7 @@ dependencies {
     implementation (libs.firebase.crashlytics.ktx)
     implementation (libs.firebase.analytics.ktx)
     implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.perf.ktx)
     implementation (libs.play.services.auth)
     implementation (libs.integrity)
     implementation (libs.circleimageview)

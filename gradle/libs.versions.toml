@@ -6,6 +6,7 @@ firebase-bom = "31.5.0"
 firebase-crashlytics-gradle = "2.9.5"
 firebase-crashlytics-ktx = "18.3.7"
 firebase-database-ktx = "20.2.1"
+firebase-perf-ktx = "20.3.2"
 google-services = "4.3.15"
 gradle = "3.4.0"
 integrity = "1.1.0"
@@ -30,6 +31,7 @@ firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "fir
 firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebase-crashlytics-gradle" }
 firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx", version.ref = "firebase-crashlytics-ktx" }
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebase-database-ktx" }
+firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx", version.ref = "firebase-perf-ktx" }
 google-services = { module = "com.google.gms:google-services", version.ref = "google-services" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 integrity = { module = "com.google.android.play:integrity", version.ref = "integrity" }
