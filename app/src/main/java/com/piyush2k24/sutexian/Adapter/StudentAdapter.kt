@@ -1,11 +1,16 @@
 package com.piyush2k24.sutexian.Adapter
 
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.piyush2k24.sutexian.Model.Students
 import com.piyush2k24.sutexian.R
+import org.w3c.dom.Text
+import java.util.Base64
 
 class StudentAdapter(
     private val StudentsList: ArrayList<Students>,
@@ -23,20 +28,19 @@ class StudentAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentStudent=StudentsList[position]
-        holder.StudFname.text= currentStudent.Fname
-        holder.StudLname.text=currentStudent.Lname
-        holder.StudBate.text=currentStudent.Bdate
-        holder.StudPhone.text=currentStudent.Phone
-        holder.StudCollege.text=currentStudent.Clg
-        holder.StudEmail.text=currentStudent.Email
+
+        val bytes=android.util.Base64.decode(currentStudent.UserImage,android.util.Base64.DEFAULT)
+        val bitmap=BitmapFactory.decodeByteArray(bytes,0,bytes.size)
+        holder.UImage.setImageBitmap(bitmap)
+        holder.UName.text=currentStudent.UserFname
+        holder.UEmail.text=currentStudent.UserEmail
+        holder.UPhone.text=currentStudent.UserPhone
     }
 
     class ViewHolder(itemView: android.view.View) : RecyclerView.ViewHolder(itemView) {
-        val StudFname : TextView = itemView.findViewById(R.id.StudFname)
-        val StudLname : TextView = itemView.findViewById(R.id.StudLname)
-        val StudBate : TextView = itemView.findViewById(R.id.StudBirthdate)
-        val StudPhone : TextView = itemView.findViewById(R.id.StudPhoneNo)
-        val StudCollege : TextView= itemView.findViewById(R.id.StudCollege)
-        val StudEmail : TextView = itemView.findViewById(R.id.StudEmail)
+        val UImage:ImageView =itemView.findViewById(R.id.UImage)
+        val UName:TextView = itemView.findViewById(R.id.UName)
+        val UEmail:TextView=itemView.findViewById(R.id.UEmail)
+        val UPhone:TextView=itemView.findViewById(R.id.UPhone)
     }
 }

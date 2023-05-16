@@ -51,4 +51,7 @@
     <string name="update_data">Update Data</string>
     <string name="delete_data">Delete Data</string>
     <string name="crash_button">Crash Button</string>
+    <string name="here">, here</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>

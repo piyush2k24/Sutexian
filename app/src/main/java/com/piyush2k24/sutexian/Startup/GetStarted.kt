@@ -21,11 +21,11 @@ class GetStarted : AppCompatActivity() {
 
     private fun callers(){
         binding.SignUp.setOnClickListener {
-            showToast("Sign Up 🤥")
+//            showToast("Sign Up 🤥")
             startActivity(Intent(this@GetStarted,SignUp::class.java))
         }
         binding.SignIn.setOnClickListener{
-            showToast("Sign In 😒")
+//            showToast("Sign In 😒")
             startActivity(Intent(applicationContext,SignIn::class.java))
         }
     }

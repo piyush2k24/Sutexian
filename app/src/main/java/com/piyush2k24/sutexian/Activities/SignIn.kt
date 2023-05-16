@@ -84,7 +84,7 @@ class SignIn : AppCompatActivity() {
     private fun caller(){
         binding.SignIn.setOnClickListener{
             if(isValidate()){
-                firebaseAuth.signInWithEmailAndPassword(binding.EmailId.text.toString(),binding.Password.text.toString())
+                firebaseAuth.signInWithEmailAndPassword(binding.Email.text.toString(),binding.Password.text.toString())
                     .addOnSuccessListener {
                         showToast("Successfully SignIn")
                         startActivity(Intent(this@SignIn, GetDataFromRealtimeFirebase::class.java))
@@ -94,7 +94,7 @@ class SignIn : AppCompatActivity() {
                     })
             }
         }
-        binding.CreateAnNewAccount.setOnClickListener{
+        binding.SignUp.setOnClickListener{
             startActivity(Intent(applicationContext,SignUp::class.java))
         }
 
@@ -104,10 +104,10 @@ class SignIn : AppCompatActivity() {
 
     }
     private fun isValidate(): Boolean {
-        if(binding.EmailId.text.toString().isEmpty()){
+        if(binding.Email.text.toString().isEmpty()){
             showToast("Please Enter Your Email");
             return false
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.EmailId.text.toString()).matches()){
+        }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.Email.text.toString()).matches()){
             showToast("Please Enter Valid Email")
             return false
         }else if (binding.Password.text.toString().isEmpty()){

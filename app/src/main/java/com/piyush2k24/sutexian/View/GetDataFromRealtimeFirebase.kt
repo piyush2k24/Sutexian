@@ -25,7 +25,7 @@ class GetDataFromRealtimeFirebase : AppCompatActivity() {
         binding.StudListRecycle.layoutManager=LinearLayoutManager(this)
         binding.StudListRecycle.setHasFixedSize(true)
         StudentList= arrayListOf<Students>()
-        databaseReference=FirebaseDatabase.getInstance().getReference("Students")
+        databaseReference=FirebaseDatabase.getInstance().getReference("Users")
         getData()
     }
 

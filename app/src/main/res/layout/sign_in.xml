@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,129 +7,122 @@
     tools:context=".Activities.SignIn"
     android:orientation="vertical">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/SignIn"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:text="@string/sign_in"
-        android:textSize="22sp"
-        android:fontFamily="@font/b612"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/md_theme_light_background"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="72dp"
-        app:cornerRadius="19dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@id/Llc1"
-        android:layout_marginTop="22dp"
-        app:rippleColor="@color/ic_launcher_background"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/CreateAnNewAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/create_an_account"
-        android:layout_below="@id/SignIn"
-        android:layout_centerHorizontal="true"
-        android:textStyle="normal"
-        android:textSize="17sp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/md_theme_dark_inverseOnSurface"/>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_llc"
+        android:elevation="7dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
         android:orientation="vertical"
-        android:background="@drawable/bg_sign_in"
-        android:id="@+id/Llc1">
+        android:layout_gravity="center">
 
-        <LinearLayout
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_llc"
-            android:layout_marginStart="22dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginTop="72dp"
-            android:layout_marginBottom="17dp"
-            android:gravity="center">
+            android:text="@string/sign_in"
+            android:textSize="32sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_light_primary"
+            android:gravity="center"
+            android:layout_margin="12dp"/>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/text_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_in"
-                android:textSize="42sp"
-                android:fontFamily="@font/b612"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_margin="27dp"
-                android:textColor="@color/md_theme_light_primary"/>
-
-            <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:hint="@string/email"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="22dp">
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/EmailId"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textEmailAddress"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="0dp"
+            android:hint="@string/password">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:layout_marginTop="7dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="22dp"
-                android:layout_marginBottom="32dp">
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Password"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPassword"/>
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/sign_in"
+            android:fontFamily="@font/roboto"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cornerRadius="12dp"
+            app:rippleColor="@color/md_theme_dark_onSecondaryContainer"/>
 
-        </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_an_account"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/md_theme_light_primary"
+            android:textStyle="bold"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:padding="7dp"
-            android:layout_margin="12dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/SignInWithGoogle"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:src="@drawable/google_64px"
+            android:layout_margin="12dp"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
                 android:background="@drawable/bg_llc"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                android:padding="7dp"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/SignInWithPhone"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:src="@drawable/sms_64px"
+                android:elevation="7dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:padding="2dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/SignInWithGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/google_64px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
                 android:background="@drawable/bg_llc"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                android:padding="7dp"/>
+                android:elevation="7dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:padding="2dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/SignInWithPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sms_64px"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+
+</ScrollView>
